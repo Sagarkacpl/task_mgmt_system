@@ -76,9 +76,14 @@ if(empty($admin_id))
                                             <thead class="thead-dark">
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Employee Name</th>
-                                                    <th>Email</th>
-                                                    <th>Phone</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Employee Name">Name</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Email">Email</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Date of Birth">DOB</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Date of Joining">DOJ</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Department">Department</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Designation">Designation</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Phone">Phone</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Reporting Member">RM</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -93,7 +98,20 @@ if(empty($admin_id))
                                                     <th scope="row"><?php echo $count++; ?></th>
                                                     <td><?php echo $read['Name'] ?></td>
                                                     <td><?php echo $read['Email'] ?></td>
+                                                    <td><?php echo $read['Emp_deptment']; ?></td>
+                                                    <td><?php echo $read['Emp_designation']; ?></td>
+                                                    <td><?php echo $read['Emp_deptment'] ?></td>
+                                                    <td><?php echo $read['Emp_designation'] ?></td>
                                                     <td><?php echo $read['Phone_no'] ?></td>
+                                                    <td>
+                                                        <?php 
+                                                            if(!empty($read['Emp_reporting'])){
+                                                                echo $read['Emp_reporting'];
+                                                            }else{
+                                                                echo "No Reporting Member";
+                                                            }
+                                                        ?>
+                                                    </td>
                                                     <td>
                                                         <div class="">
                                                             <a href="#" onclick="return confirm('Are You Sure You Want To Edit This Record ?');" class="btn btn-success"><i class="bx bx-pencil"></i></a>
