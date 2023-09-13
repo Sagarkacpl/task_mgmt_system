@@ -169,7 +169,7 @@ if(empty($admin_id))
                                             $emp_dob = mysqli_real_escape_string($db,$_POST['emp_dob']);
                                             $emp_password = md5($_POST['emp_password']);
 
-                                            $add_employee = mysqli_query($db,"INSERT INTO `users` (`ID`, `Emp_id`, `Name`, `Phone_no`, `Email`, `Password`, `is_admin`, `Emp_deptment`, `Emp_designation`, `Date_of_Birth`, `Emp_joining_date`, `Emp_reporting`,`UserType`, `DeletedStatus`, `Created_at`) VALUES (NULL, '$emp_id', '$emp_name', '$emp_phone', '$emp_email', '$emp_password', '0', '$emp_deptment', '$emp_designation', '$emp_dob', '$emp_joining_date', '$emp_reporting', 'Employee' ,'0', current_timestamp())");
+                                            $add_employee = mysqli_query($db,"INSERT INTO `users` (`ID`, `Emp_id`, `Name`, `Phone_no`, `Email`, `Password`, `is_admin`, `Emp_deptment`, `Emp_designation`, `Date_of_Birth`, `Emp_joining_date`, `Emp_reporting`, `DeletedStatus`, `Created_at`) VALUES (NULL, '$emp_id', '$emp_name', '$emp_phone', '$emp_email', '$emp_password', '0', '$emp_deptment', '$emp_designation', '$emp_dob', '$emp_joining_date', '$emp_reporting' ,'0', current_timestamp())");
                                             if($add_employee == TRUE)
                                             {
                                                 echo "<script>alert('New Employee Add Sucessfully');window.location.href='employee.php';</script>";
