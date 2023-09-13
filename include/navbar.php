@@ -22,7 +22,7 @@ $read = mysqli_fetch_assoc($nav_bar_valdate);
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="department.php">Department</a></li>
                                 <li><a href="designation.php">Designation</a></li>
-                                <li><a href="report_member.php">Reporting Member</a></li>
+                                <!-- <li><a href="report_member.php">Reporting Member</a></li> -->
                             </ul>
                         </li>
 
