@@ -76,6 +76,7 @@ if(empty($admin_id))
                                             <thead class="thead-dark">
                                                 <tr>
                                                     <th>#</th>
+                                                    <th data-toggle="tooltip" data-placement="top" title="Employee Code">Emp ID</th>
                                                     <th data-toggle="tooltip" data-placement="top" title="Employee Name">Name</th>
                                                     <th data-toggle="tooltip" data-placement="top" title="Email">Email</th>
                                                     <th data-toggle="tooltip" data-placement="top" title="Date of Birth">DOB</th>
@@ -95,7 +96,8 @@ if(empty($admin_id))
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <th scope="row"><?php echo $count++; ?></th>
+                                                    <td scope="row"><?php echo $count++; ?></td>
+                                                    <td><?php echo $read['Emp_id'] ?></td>
                                                     <td><?php echo $read['Name'] ?></td>
                                                     <td><?php echo $read['Email'] ?></td>
                                                     <td><?php echo $read['Emp_deptment']; ?></td>
@@ -114,8 +116,8 @@ if(empty($admin_id))
                                                     </td>
                                                     <td>
                                                         <div class="">
-                                                            <a href="#" onclick="return confirm('Are You Sure You Want To Edit This Record ?');" class="btn btn-success"><i class="bx bx-pencil"></i></a>
-                                                            <a href="#" onclick="return confirm('Are You Sure You Want To Delete This Record ?');" class="btn btn-danger">
+                                                            <a href="edit_employees.php?id=<?php echo $read['ID']; ?>" onclick="return confirm('Are You Sure You Want To Edit This Record ?');" class="btn btn-success"><i class="bx bx-pencil"></i></a>
+                                                            <a href="delete_employee.php?id=<?php echo $read['ID']; ?>" onclick="return confirm('Are You Sure You Want To Delete This Record ?');" class="btn btn-danger">
                                                                 <i class="bx bx-trash"></i>
                                                             </a>
                                                             
