@@ -59,7 +59,7 @@ if(empty($admin_id))
                                 <h4 class="mb-0 font-size-18">Designation</h4>
 
                                 <div class="page-title-right">
-                                    <a href="add_department.php" class="btn btn-primary">Add New Designation</a>
+                                    <a href="add_designation.php" class="btn btn-primary">Add New Designation</a>
                                 </div>
 
                             </div>
@@ -83,20 +83,20 @@ if(empty($admin_id))
                                             </thead>
                                             <tbody>
                                                 <?php 
-                                                    $department = mysqli_query($db,"SELECT * FROM `department` WHERE deletedStatus='0'");
+                                                    $department = mysqli_query($db,"SELECT * FROM `designation` WHERE deletedStatus='0'");
                                                     $count = 1;
                                                     while($read = mysqli_fetch_assoc($department))
                                                     {
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>
-                                                    <td><?php echo $read['department_name']; ?></td>
+                                                    <td><?php echo $read['designation_name']; ?></td>
                                                     <td><?php echo date_format(date_create($read['created_at']),"d-M-Y") ?></td>
                                                     <td>
                                                         <div class="">
-                                                            <a href="edit_department.php?id=<?php echo $read['ID']; ?>" onclick="return confirm('Are You Sure You Want To Edit This Record ?');" class="btn btn-success"><i class="bx bx-pencil"></i></a>
+                                                            <a href="edit_designation.php?id=<?php echo $read['ID']; ?>" onclick="return confirm('Are You Sure You Want To Edit This Record ?');" class="btn btn-success"><i class="bx bx-pencil"></i></a>
 
-                                                            <a href="deleted_department.php?id=<?php echo $read['ID']; ?>" onclick="return confirm('Are You Sure You Want To Delete This Record ?');" class="btn btn-danger"><i class="bx bx-trash"></i>
+                                                            <a href="deleted_designation.php?id=<?php echo $read['ID']; ?>" onclick="return confirm('Are You Sure You Want To Delete This Record ?');" class="btn btn-danger"><i class="bx bx-trash"></i>
                                                             </a>
 
                                                         </div>
