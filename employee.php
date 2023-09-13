@@ -59,7 +59,7 @@ if(empty($admin_id))
                                 <h4 class="mb-0 font-size-18">Employees List</h4>
 
                                 <div class="page-title-right">
-                                    <a href="" class="btn btn-primary">Add New Employee</a>
+                                    <a href="add_employees.php" class="btn btn-primary">Add New Employee</a>
                                 </div>
                                 
                             </div>
@@ -90,7 +90,7 @@ if(empty($admin_id))
                                                     {
                                                 ?>
                                                 <tr>
-                                                    <th scope="row"><?php echo $count; ?></th>
+                                                    <th scope="row"><?php echo $count++; ?></th>
                                                     <td><?php echo $read['Name'] ?></td>
                                                     <td><?php echo $read['Email'] ?></td>
                                                     <td><?php echo $read['Phone_no'] ?></td>
@@ -104,7 +104,7 @@ if(empty($admin_id))
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <?php } $count++;?>
+                                                <?php } $count;?>
                                             </tbody>
                                         </table>
                                     </div>
